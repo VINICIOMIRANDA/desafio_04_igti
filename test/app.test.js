@@ -4,14 +4,14 @@ const db = require('../src/db')
 
 describe('Teste de integração', () => {
 
-   //beforeEach(async () => {
- //   await db.produto.destroy({ where: {} })
- // }) 
+   beforeEach(async () => {
+    await db.produto.destroy({ where: {} })
+  }) 
 
   afterAll(async () => await db.sequelize.close())
 
   const produtoInicial = {
-    Codigo: '1',
+    Codigo: '100',
     Descricao: 'Produto de prateleira',
     Preco: 50.00
   }
