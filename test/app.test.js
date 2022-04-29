@@ -56,7 +56,7 @@ const payloadAtualizadoInexistenteRequest = {
       .then(res => expect(res.status).toBe(200))
   })
 
-  test.only('Cenário 02 - Produto Cadastrado na Base', async () => {
+  test('Cenário 02 - Produto Cadastrado na Base', async () => {
     const res = await request(app).post('/produto').send(payloadRequest)
     expect(res.status).toBe(201)
 
